@@ -9,6 +9,8 @@
 #define CARD_CARD_H_
 
 #include <stdint.h>
+#include <stdio.h>
+#include <string.h>
 // creating structure to hold the card data
 typedef struct ST_cardData_t
 {
