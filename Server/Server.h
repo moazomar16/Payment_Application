@@ -50,21 +50,15 @@ uint8_t primaryAccountNumber[20];
 }ST_accountsDB_t;
 
 
-// Creating array of pointer to structure to use it as a accounts database
-static ST_accountsDB_t accountsBD[255];
+ST_transaction_t transaction_DB[255];
 
-// Creating array of pointer to structure to use it as a transaction database
-ST_transaction_t transactionsBD[255];
-
+ST_accountsDB_t accounts_DB[255];
 //APIs
 EN_transStat_t recieveTransactionData(ST_transaction_t *transData);
 EN_serverError_t isValidAccount(ST_cardData_t *cardData);
 EN_serverError_t isAmountAvailable(ST_terminalData_t *termData);
 EN_serverError_t saveTransaction(ST_transaction_t *transData);
 EN_serverError_t getTransaction(uint32_t transactionSequenceNumber, ST_transaction_t *transData);
-
-
-
 
 
 
