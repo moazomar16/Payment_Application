@@ -8,7 +8,7 @@
 
 // get the card holder name
 EN_cardError_t getCardHolderName(ST_cardData_t *cardData){
-	printf("Enter Card Holder Name \n");
+	printf("Enter Card Holder Name: ");
 	fflush(stdout); fflush(stdin);
 	gets(cardData->cardHolderName);
 	fflush(stdout); fflush(stdin);
@@ -23,7 +23,7 @@ EN_cardError_t getCardHolderName(ST_cardData_t *cardData){
 
 // getting card expiration date
 EN_cardError_t getCardExpiryDate(ST_cardData_t *cardData){
-	printf("Enter Card Expiry Date MM/YY e.g \"08/22\" \n");
+	printf("Enter Card Expiry Date MM/YY e.g \"08/22\": ");
 	fflush(stdout); fflush(stdin);
 	gets(cardData->cardExpirationDate);
 	fflush(stdout); fflush(stdin);
@@ -41,7 +41,7 @@ EN_cardError_t getCardExpiryDate(ST_cardData_t *cardData){
 
 // getting card primary account number
 EN_cardError_t getCardPAN(ST_cardData_t *cardData){
-	printf("Enter Card Primary Account Number \n");
+	printf("Enter Card Primary Account Number: ");
 	fflush(stdout); fflush(stdin);
 	scanf("%[0-9]",cardData->primaryAccountNumber);
 	fflush(stdout); fflush(stdin);
