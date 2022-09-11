@@ -4,7 +4,7 @@
  *  Created on: Aug 19, 2022
  *      Author: moaz omar
  */
-//#include"../card/card.h"
+#include"../card/card.h"
 #include"Terminal.h"
 
 
@@ -54,7 +54,7 @@ EN_terminalError_t isCardExpired(ST_cardData_t *cardData, ST_terminalData_t *ter
 }
 // this function asks the user to enter the amount of transaction
 EN_terminalError_t getTransactionAmount(ST_terminalData_t *termData){
-	printf("\n Enter Transaction Amount");
+	printf("\nEnter Transaction Amount: ");
 	fflush(stdout); fflush(stdin);
 	scanf("%f",&termData->transAmount);
 	fflush(stdout); fflush(stdin);
@@ -74,7 +74,7 @@ EN_terminalError_t isBelowMaxAmount(ST_terminalData_t *termData){
 
 // this function asks the user to enter the max amount of transaction allowed
 EN_terminalError_t setMaxAmount(ST_terminalData_t *termData){
-	printf("\n Enter transaction Max Amount \n");
+	printf("Enter transaction Max Amount: ");
 	fflush(stdout); fflush(stdin);
 	scanf("%f",&termData->maxTransAmount);
 	fflush(stdout); fflush(stdin);
